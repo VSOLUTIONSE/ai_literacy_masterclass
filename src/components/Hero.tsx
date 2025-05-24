@@ -3,9 +3,40 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 14,
+    hours: 22,
+    minutes: 45,
+    seconds: 0
+  });
 
   useEffect(() => {
     setIsVisible(true);
+
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + timeLeft.days);
+    targetDate.setHours(targetDate.getHours() + timeLeft.hours);
+    targetDate.setMinutes(targetDate.getMinutes() + timeLeft.minutes);
+
+    const timer = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        clearInterval(timer);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   const scrollToRegister = () => {
@@ -55,16 +86,20 @@ const Hero: React.FC = () => {
                 <p className="text-white font-semibold text-lg">Next masterclass starts in:</p>
                 <div className="flex gap-4 mt-2">
                   <div className="bg-white/20 backdrop-blur-sm rounded-md px-3 py-2 text-white">
-                    <span className="block text-2xl font-bold">14</span>
+                    <span className="block text-2xl font-bold">{timeLeft.days}</span>
                     <span className="text-xs">Days</span>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-md px-3 py-2 text-white">
-                    <span className="block text-2xl font-bold">22</span>
+                    <span className="block text-2xl font-bold">{timeLeft.hours}</span>
                     <span className="text-xs">Hours</span>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-md px-3 py-2 text-white">
-                    <span className="block text-2xl font-bold">45</span>
+                    <span className="block text-2xl font-bold">{timeLeft.minutes}</span>
                     <span className="text-xs">Minutes</span>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-md px-3 py-2 text-white">
+                    <span className="block text-2xl font-bold">{timeLeft.seconds}</span>
+                    <span className="text-xs">Seconds</span>
                   </div>
                 </div>
               </div>
