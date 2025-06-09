@@ -9,6 +9,7 @@ interface TestimonialProps {
   rating: number;
 }
 
+
 const testimonials: TestimonialProps[] = [
   {
     quote: "This masterclass transformed my approach to work. I'm now completing projects in half the time while delivering higher quality results. The ROI was immediate and substantial.",
@@ -46,41 +47,41 @@ const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <div className="container px-4 mx-auto md:px-6">
+        <div className="max-w-3xl mx-auto mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
             Success Stories
           </h2>
           <p className="text-xl text-gray-600">
-            Hear from professionals who transformed their careers through AI literacy.
+            Hear from people who are transforming their careers through AI literacy.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="overflow-hidden bg-white shadow-lg rounded-2xl">
             <div className="md:flex">
-              <div className="md:w-1/3 relative">
+              <div className="relative md:w-1/3">
                 <img 
                   src={testimonials[currentIndex].image} 
                   alt={testimonials[currentIndex].name} 
-                  className="w-full h-full object-cover object-center"
+                  className="object-cover object-center w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent md:hidden flex items-end">
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-gray-900/70 to-transparent md:hidden">
                   <div className="p-4">
                     <div className="flex mb-1">
                       {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                         <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
                       ))}
                     </div>
-                    <h3 className="text-white font-semibold">{testimonials[currentIndex].name}</h3>
-                    <p className="text-gray-200 text-sm">{testimonials[currentIndex].title}</p>
+                    <h3 className="font-semibold text-white">{testimonials[currentIndex].name}</h3>
+                    <p className="text-sm text-gray-200">{testimonials[currentIndex].title}</p>
                   </div>
                 </div>
               </div>
               
-              <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-between">
+              <div className="flex flex-col justify-between p-6 md:w-2/3 md:p-8">
                 <blockquote>
-                  <p className="text-gray-700 text-lg mb-6 italic">
+                  <p className="mb-6 text-lg italic text-gray-700">
                     "{testimonials[currentIndex].quote}"
                   </p>
                   
@@ -97,22 +98,22 @@ const Testimonials: React.FC = () => {
                   </div>
                 </blockquote>
                 
-                <div className="flex justify-between items-center mt-6">
-                  <p className="text-gray-500 text-sm">
+                <div className="flex items-center justify-between mt-6">
+                  <p className="text-sm text-gray-500">
                     {currentIndex + 1} of {testimonials.length}
                   </p>
                   
                   <div className="flex space-x-2">
                     <button 
                       onClick={prevTestimonial}
-                      className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                      className="p-2 transition-colors bg-gray-100 rounded-full hover:bg-gray-200"
                       aria-label="Previous testimonial"
                     >
                       <ChevronLeft size={20} className="text-gray-700" />
                     </button>
                     <button 
                       onClick={nextTestimonial}
-                      className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                      className="p-2 transition-colors bg-gray-100 rounded-full hover:bg-gray-200"
                       aria-label="Next testimonial"
                     >
                       <ChevronRight size={20} className="text-gray-700" />

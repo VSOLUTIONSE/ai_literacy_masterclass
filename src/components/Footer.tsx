@@ -1,79 +1,52 @@
 import React from 'react';
-import { Cpu, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Cpu, Mail, Phone, MapPin, Facebook} from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="text-white bg-gray-900">
+      <div className="container px-4 py-12 mx-auto md:px-6">
+        <div className="grid gap-8 md:grid-cols-4">
           <div>
             <div className="flex items-center mb-4">
-              <Cpu className="h-8 w-8 text-blue-400 mr-2" />
-              <span className="font-bold text-xl">AI Masterclass</span>
+              <Cpu className="w-8 h-8 mr-2 text-blue-400" />
+              <span className="text-xl font-bold">AI Drive</span>
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="mb-6 text-gray-400">
               Empowering individuals and businesses with the AI literacy skills needed to thrive in the digital age.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 transition-colors hover:text-white">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
-              </a>
+              
             </div>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#benefits" className="text-gray-400 hover:text-white transition-colors">Benefits</a>
+                <a href="#benefits" className="text-gray-400 transition-colors hover:text-white">Benefits</a>
               </li>
               <li>
-                <a href="#outcomes" className="text-gray-400 hover:text-white transition-colors">Learning Outcomes</a>
+                <a href="#outcomes" className="text-gray-400 transition-colors hover:text-white">Learning Outcomes</a>
               </li>
               <li>
-                <a href="#why-ai" className="text-gray-400 hover:text-white transition-colors">Why AI?</a>
+                <a href="#why-ai" className="text-gray-400 transition-colors hover:text-white">Why AI?</a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Success Stories</a>
+                <a href="#testimonials" className="text-gray-400 transition-colors hover:text-white">Success Stories</a>
               </li>
               <li>
-                <a href="#register" className="text-gray-400 hover:text-white transition-colors">Register</a>
+                <a href="#register" className="text-gray-400 transition-colors hover:text-white">Register</a>
               </li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">AI Tools Guide</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Case Studies</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">FAQ</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
+          
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail size={18} className="text-gray-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -91,8 +64,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-500 text-sm">
+        <div className="pt-8 mt-12 text-center border-t border-gray-800">
+          <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} AI Literacy Masterclass. All rights reserved.
           </p>
         </div>

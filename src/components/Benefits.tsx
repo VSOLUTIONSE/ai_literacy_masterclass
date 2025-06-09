@@ -8,13 +8,13 @@ interface BenefitProps {
 }
 
 const BenefitCard: React.FC<BenefitProps> = ({ icon, title, description }) => (
-  <div className="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+  <div className="p-6 transition-all duration-300 bg-white shadow-md rounded-xl hover:shadow-lg hover:-translate-y-1">
     <div className="flex items-start">
-      <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
+      <div className="p-3 mr-4 text-blue-600 bg-blue-100 rounded-lg">
         {icon}
       </div>
       <div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+        <h3 className="mb-2 text-xl font-semibold text-gray-900">{title}</h3>
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
@@ -57,9 +57,9 @@ const Benefits: React.FC = () => {
 
   return (
     <section id="benefits" className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <div className="container px-4 mx-auto md:px-6">
+        <div className="max-w-3xl mx-auto mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
             Transform Your Capabilities with AI Literacy
           </h2>
           <p className="text-xl text-gray-600">
@@ -67,7 +67,7 @@ const Benefits: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit, index) => (
             <BenefitCard 
               key={index}
