@@ -1,5 +1,5 @@
 import React from "react";
-import { Cpu, Mail, Phone, MapPin, Facebook, Youtube } from "lucide-react";
+import { Cpu, Mail, Phone, MapPin, Youtube } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
