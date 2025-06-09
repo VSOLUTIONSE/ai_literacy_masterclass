@@ -36,7 +36,7 @@ const Register: React.FC = () => {
       <div className="container px-4 mx-auto md:px-6">
         <div className="grid gap-12 md:grid-cols-2">
           {/* Registration Form */}
-          <div className="p-6 h-[50%] shadow-md bg-gray-50 rounded-2xl md:p-8">
+          <div className="p-6 md:h-[50%] shadow-md bg-gray-50 rounded-2xl md:p-8">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">
               Reserve Your Spot
             </h2>
@@ -104,7 +104,7 @@ const Register: React.FC = () => {
                       id="enquiry-name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none "
                       placeholder="Enter your name"
                       required
                     />
