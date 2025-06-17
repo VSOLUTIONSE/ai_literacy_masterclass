@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.youtube.com/@theaidrivenow"
                 className="text-gray-400 transition-colors hover:text-white"
               >
                 <Youtube size={20} />

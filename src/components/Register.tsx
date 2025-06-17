@@ -4,21 +4,21 @@ const Register: React.FC = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  // const [isRegistering, setIsRegistering] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(false);
   const [isMessageSent, setIsMessageSent] = useState(false);
 
-  // const handleRegister = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setIsRegistering(true);
-  //   // Simulate API call
-  //   setTimeout(() => {
-  //     setIsRegistering(false);
-  //     // Success feedback would go here
-  //     setEmail("");
-  //     setName("");
-  //     alert("Registration successful! We will contact you with more details.");
-  //   }, 1000);
-  // };
+  const handleRegister = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsRegistering(true);
+    // Simulate API call
+    setTimeout(() => {
+      setIsRegistering(false);
+      // Success feedback would go here
+      setEmail("");
+      setName("");
+      window.open('https://paystack.shop/pay/ailiteracy','_blank')
+    }, 1000);
+  };
 
   const handleEnquiry = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,9 +48,10 @@ const Register: React.FC = () => {
               <button
                 type="submit"
                 className={`w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md transition-colors font-medium flex items-center justify-center ${
-                   "opacity-75 cursor-wait"
+                  isRegistering && "opacity-75 cursor-wait"
                 }`}
-                // disabled={isRegistering}
+                onClick={handleRegister}
+                disabled={isRegistering}
               >
                 {
                    "Register for the Masterclass"}
@@ -58,7 +59,7 @@ const Register: React.FC = () => {
             </div>
 
             <p className="mt-4 text-sm text-center text-gray-500">
-              Limited seats available
+              Limited spots available
             </p>
 
             <div className="pt-6 mt-8 border-t border-gray-200">
@@ -69,7 +70,7 @@ const Register: React.FC = () => {
                   </div>
                 </div>
                 <p className="font-bold text-gray-900">
-                  $3{" "}
+                  $3~N5000 {" "}
                   <span className="font-normal text-gray-400 line-through">
                     $20
                   </span>

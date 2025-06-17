@@ -3,12 +3,13 @@ import { CheckCircle } from "lucide-react";
 
 const Outcomes: React.FC = () => {
   const learningOutcomes = [
-    "Understand AI & Writing Prompting the Easy Way",
+    "Understand AI & Writing accurate Prompt the Easy Way",
     "Your Own AI WhatsApp Personal Assistant - For Free!",
     "Identify the right AI tools for specific tasks and challenges.",
-    "Learn & Create AI Agents.",
+    "Learn & Create AI Agents for tedious tasks.",
     "Turn AI from a buzzword into a practical, everyday advantage",
-    "AI for Academic Research & Projects",
+    "AI for Academic Research & Projects and much more",
+
   ];
 
   return (

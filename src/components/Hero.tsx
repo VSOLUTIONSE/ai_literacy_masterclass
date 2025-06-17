@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import hero from '../img/ai_lit.jpg'
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
-    days: 14,
-    hours: 22,
-    minutes: 45,
+    days: 0,
+    hours: 0,
+    minutes: 0,
     seconds: 0
   });
 
   useEffect(() => {
     setIsVisible(true);
 
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + timeLeft.days);
-    targetDate.setHours(targetDate.getHours() + timeLeft.hours);
-    targetDate.setMinutes(targetDate.getMinutes() + timeLeft.minutes);
+    // Set target date to 21st June 2025, 00:00:00
+    const targetDate = new Date(2025, 5, 21, 0, 0, 0); // Month is 0-indexed: 5 = June
 
     const timer = setInterval(() => {
       const now = new Date();
@@ -78,7 +77,7 @@ const Hero: React.FC = () => {
           <div className={`transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative overflow-hidden bg-white shadow-xl rounded-2xl">
               <img 
-                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src={hero} 
                 alt="AI Literacy Workshop" 
                 className="object-cover w-full h-96"
               />
