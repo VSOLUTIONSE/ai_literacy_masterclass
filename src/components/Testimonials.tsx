@@ -23,7 +23,7 @@ const testimonials: TestimonialProps[] = [
     rating: 5
   },
   {
-    quote: "I've been on the class from the , and i must say it has been a game changer for me, as a content marketer i have been able to employ AI tools in research, content generation and analysis. I can't recommend this enough!",
+    quote: "I've been on the class from the onset , and i must say it has been a game changer for me, as a content marketer i have been able to employ AI tools in research, content generation and analysis. I can't recommend this enough!",
     name: "Zino ",
     title: "Content Marketer",
     image: zino,
