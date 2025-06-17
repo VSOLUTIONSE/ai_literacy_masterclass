@@ -16,7 +16,7 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    quote: "my experience has been an eye-opening,explored various AI tools and techniques that I never knew existed...it has really transform my workflow.",
+    quote: "my experience has been eye-opening,explored various AI tools and techniques that I never knew existed...it has really transform my workflow.",
     name: "Bright Akhigbe",
     title: "Fx Price Speculator",
     image: akhigbe,
