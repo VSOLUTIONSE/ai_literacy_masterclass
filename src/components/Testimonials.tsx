@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import akhigbe from '../img/akhigbe.png';
+import oloye from '../img/oloye.png';
+import zino from '../img/zino.png';
+
 
 interface TestimonialProps {
   quote: string;
@@ -12,25 +16,25 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    quote: "This masterclass transformed my approach to work. I'm now completing projects in half the time while delivering higher quality results. The ROI was immediate and substantial.",
-    name: "Sarah Johnson",
-    title: "Marketing Director",
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    quote: "my experience has been an eye-opening,explored various AI tools and techniques that I never knew existed...it has really transform my workflow.",
+    name: "Bright Akhigbe",
+    title: "Fx Price Speculator",
+    image: akhigbe,
     rating: 5
   },
   {
-    quote: "As someone with zero technical background, I was worried AI would be too complex. This masterclass broke everything down into simple, actionable steps that I could immediately apply.",
-    name: "Michael Chen",
-    title: "Small Business Owner",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    quote: "I've been on the class from the , and i must say it has been a game changer for me, as a content marketer i have been able to employ AI tools in research, content generation and analysis. I can't recommend this enough!",
+    name: "Zino ",
+    title: "Content Marketer",
+    image: zino,
     rating: 5
   },
   {
-    quote: "The productivity gains have been astronomical. Tasks that took hours now take minutes, and the quality of my work has improved dramatically. This is the most valuable training I've ever invested in.",
-    name: "Elena Rodriguez",
-    title: "Project Manager",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    rating: 5
+    quote: "AI drive have provided me with mindblowing tools i never knew existed, it has really transform my workflow...",
+    name: "Daniel Oloye",
+    title: "Brand Visual identity Designer",
+    image: oloye,
+    rating: 4
   }
 ];
 
